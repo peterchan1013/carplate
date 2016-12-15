@@ -11,7 +11,7 @@ DetectRegions::DetectRegions()
 	saveRegions = false;
 }
 
-
+//判断矩形是否合符要求
 bool DetectRegions::verifySizes (RotatedRect candidate)
 {
 	float error = 0.4;
@@ -89,11 +89,15 @@ vector <Plate> DetectRegions::segment(Mat input)
 	findContours(img_threshold, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE);
 	vector < vector < Point > > :: iterator itc = contours.begin();
 	vector < RotatedRect > rects;
-
+	//对轮廓进行遍历
 	while (itc != contours.end())
 	{
+		//RotatedRect可旋转的矩形，opencv3寻找最小包围矩形-minAreaRect函数 
+		//在轮廓得到的点中寻找一个能包括他们的矩形
 		RotatedRect mr = minAreaRect(Mat (*itc));
+		//初步筛出一些不合逻辑的矩形轮廓
 		if( !verifySizes(mr))
+			//earse函数删除指定的元素
 			itc = contours.erase(itc);
 		else
 		{
@@ -105,6 +109,7 @@ vector <Plate> DetectRegions::segment(Mat input)
 	
 	Mat result;
 	input.copyTo(result);
+	//画出轮廓
 	drawContours(result, contours, -1, Scalar(255, 0, 0), 1);
 
 	//For better rect cropping for each posible box
@@ -112,6 +117,7 @@ vector <Plate> DetectRegions::segment(Mat input)
 	//And then we can retrieve more clearly the contour box
 	for (int i = 0; i < rects.size(); i++)
 	{
+		//Scalar(0,255,0)circle有三通道，通道一的值为0，通道二的值为255，等等。这里的意思是RGB值为0 255 0的值
 		circle( result, rects[i].center, 3, Scalar(0, 255, 0), -1);
 		float minSize = (rects[i].size.width < rects[i].size.height)? rects[i].size.width : rects[i].size.height;
 		minSize = minSize - minSize * 0.5;
@@ -119,7 +125,7 @@ vector <Plate> DetectRegions::segment(Mat input)
 		//initialize rand and get 5 points around center for floodfill algorithm
 		srand( time (NULL));
 
-		//Initialize floodfill parameters and variables
+		//Initialize floodfill parameters and variables，RGB：0 0 0为黑色
 		Mat mask;
 		mask.create(input.rows + 2, input.cols + 2, CV_8UC1);
 		mask = Scalar::all(0);
@@ -135,6 +141,7 @@ vector <Plate> DetectRegions::segment(Mat input)
 			Point seed;
 			seed.x = rects[i].center.x + rand() % (int) minSize - (minSize / 2);
 			seed.y = rects[i].center.y + rand() % (int) minSize - (minSize / 2);
+			//画圆函数circle(picture,center,r,Scalar(0,0,0));承载图像，圆心，半径，线的颜色RGB
 			circle(result, seed, 1, Scalar(0,255,255), -1);
 			int area = floodFill(input, mask, seed, Scalar(255, 0, 0), &ccomp,Scalar(loDiff,loDiff,loDiff), Scalar(upDiff,upDiff,upDiff), flags );
 
@@ -182,7 +189,7 @@ vector <Plate> DetectRegions::segment(Mat input)
 			getRectSubPix(img_rotated, rect_size, minRect.center, img_crop);
 
 			Mat resultResized;
-			resultResized.create(33, 144, CV_8UC3); //????????Ϊ33*44??С??ͼƬ
+			resultResized.create(33, 144, CV_8UC3);
 			resize(img_crop, resultResized, resultResized.size(), 0, 0, INTER_CUBIC);
 
 			//Equalize croped image
