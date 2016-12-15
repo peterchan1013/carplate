@@ -1,0 +1,164 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+$	Debug/vc110.pdb	/^/;"	v
+CharSegment	OCR.cpp	/^CharSegment::CharSegment()$/;"	f	class:CharSegment	signature:()
+CharSegment	OCR.cpp	/^CharSegment::CharSegment(Mat i, Rect p)$/;"	f	class:CharSegment	signature:(Mat i, Rect p)
+CharSegment	OCR.h	/^	CharSegment();$/;"	p	class:CharSegment	access:public	signature:()
+CharSegment	OCR.h	/^	CharSegment(Mat i, Rect p);$/;"	p	class:CharSegment	access:public	signature:(Mat i, Rect p)
+CharSegment	OCR.h	/^class CharSegment$/;"	c
+CharSegment::CharSegment	OCR.cpp	/^CharSegment::CharSegment()$/;"	f	class:CharSegment	signature:()
+CharSegment::CharSegment	OCR.cpp	/^CharSegment::CharSegment(Mat i, Rect p)$/;"	f	class:CharSegment	signature:(Mat i, Rect p)
+CharSegment::CharSegment	OCR.h	/^	CharSegment();$/;"	p	class:CharSegment	access:public	signature:()
+CharSegment::CharSegment	OCR.h	/^	CharSegment(Mat i, Rect p);$/;"	p	class:CharSegment	access:public	signature:(Mat i, Rect p)
+CharSegment::img	OCR.h	/^	Mat img;$/;"	m	class:CharSegment	access:public
+CharSegment::pos	OCR.h	/^	Rect pos;$/;"	m	class:CharSegment	access:public
+DEBUG	OCR.h	/^	bool DEBUG;$/;"	m	class:OCR	access:public
+DectRegions_h	DetectRegions.h	2;"	d
+DetectRegions	DetectRegions.cpp	/^DetectRegions::DetectRegions()$/;"	f	class:DetectRegions	signature:()
+DetectRegions	DetectRegions.h	/^	DetectRegions();$/;"	p	class:DetectRegions	access:public	signature:()
+DetectRegions	DetectRegions.h	/^class DetectRegions$/;"	c
+DetectRegions::DetectRegions	DetectRegions.cpp	/^DetectRegions::DetectRegions()$/;"	f	class:DetectRegions	signature:()
+DetectRegions::DetectRegions	DetectRegions.h	/^	DetectRegions();$/;"	p	class:DetectRegions	access:public	signature:()
+DetectRegions::filename	DetectRegions.h	/^	string filename;$/;"	m	class:DetectRegions	access:public
+DetectRegions::histeq	DetectRegions.cpp	/^Mat DetectRegions::histeq(Mat in)  \/\/Ö±·½Í¼¾ùºâ$/;"	f	class:DetectRegions	signature:(Mat in)
+DetectRegions::histeq	DetectRegions.h	/^	Mat histeq ( Mat in);$/;"	p	class:DetectRegions	access:private	signature:( Mat in)
+DetectRegions::run	DetectRegions.cpp	/^vector <Plate> DetectRegions :: run (Mat input)$/;"	f	class:DetectRegions	signature:(Mat input)
+DetectRegions::run	DetectRegions.h	/^	vector < Plate > run (Mat input);$/;"	p	class:DetectRegions	access:public	signature:(Mat input)
+DetectRegions::saveRegions	DetectRegions.h	/^	bool saveRegions;$/;"	m	class:DetectRegions	access:public
+DetectRegions::segment	DetectRegions.cpp	/^vector <Plate> DetectRegions::segment(Mat input)$/;"	f	class:DetectRegions	signature:(Mat input)
+DetectRegions::segment	DetectRegions.h	/^	vector < Plate > segment (Mat input);$/;"	p	class:DetectRegions	access:private	signature:(Mat input)
+DetectRegions::setFilename	DetectRegions.cpp	/^void DetectRegions::setFilename(string s)$/;"	f	class:DetectRegions	signature:(string s)
+DetectRegions::setFilename	DetectRegions.h	/^	void setFilename( string f);$/;"	p	class:DetectRegions	access:public	signature:( string f)
+DetectRegions::showSteps	DetectRegions.h	/^	bool showSteps;$/;"	m	class:DetectRegions	access:public
+DetectRegions::verifySizes	DetectRegions.cpp	/^bool DetectRegions::verifySizes (RotatedRect candidate)$/;"	f	class:DetectRegions	signature:(RotatedRect candidate)
+DetectRegions::verifySizes	DetectRegions.h	/^	bool verifySizes(RotatedRect mr);$/;"	p	class:DetectRegions	access:private	signature:(RotatedRect mr)
+HORIZONTAL	OCR.h	17;"	d
+K	OCR.h	/^	int K;$/;"	m	class:OCR	access:private
+OCR	OCR.cpp	/^OCR::OCR()$/;"	f	class:OCR	signature:()
+OCR	OCR.cpp	/^OCR::OCR(string trainFile)$/;"	f	class:OCR	signature:(string trainFile)
+OCR	OCR.h	/^	OCR();$/;"	p	class:OCR	access:public	signature:()
+OCR	OCR.h	/^	OCR(string trainFile);$/;"	p	class:OCR	access:public	signature:(string trainFile)
+OCR	OCR.h	/^class OCR$/;"	c
+OCR::DEBUG	OCR.h	/^	bool DEBUG;$/;"	m	class:OCR	access:public
+OCR::K	OCR.h	/^	int K;$/;"	m	class:OCR	access:private
+OCR::OCR	OCR.cpp	/^OCR::OCR()$/;"	f	class:OCR	signature:()
+OCR::OCR	OCR.cpp	/^OCR::OCR(string trainFile)$/;"	f	class:OCR	signature:(string trainFile)
+OCR::OCR	OCR.h	/^	OCR();$/;"	p	class:OCR	access:public	signature:()
+OCR::OCR	OCR.h	/^	OCR(string trainFile);$/;"	p	class:OCR	access:public	signature:(string trainFile)
+OCR::Preprocess	OCR.h	/^	Mat Preprocess(Mat in, int newSize);$/;"	p	class:OCR	access:private	signature:(Mat in, int newSize)
+OCR::ProjectedHistogram	OCR.cpp	/^Mat OCR::ProjectedHistogram(Mat img, int t)$/;"	f	class:OCR	signature:(Mat img, int t)
+OCR::ProjectedHistogram	OCR.h	/^	Mat ProjectedHistogram(Mat img, int i);$/;"	p	class:OCR	access:private	signature:(Mat img, int i)
+OCR::ann	OCR.h	/^	CvANN_MLP ann;$/;"	m	class:OCR	access:private
+OCR::charSize	OCR.h	/^	int charSize;$/;"	m	class:OCR	access:public
+OCR::classify	OCR.cpp	/^int OCR::classify(Mat f)$/;"	f	class:OCR	signature:(Mat f)
+OCR::classify	OCR.h	/^	int classify(Mat f);$/;"	p	class:OCR	access:public	signature:(Mat f)
+OCR::classifyKnn	OCR.cpp	/^int OCR::classifyKnn(Mat f)$/;"	f	class:OCR	signature:(Mat f)
+OCR::classifyKnn	OCR.h	/^	int classifyKnn(Mat f);$/;"	p	class:OCR	access:public	signature:(Mat f)
+OCR::drawVisualFeatures	OCR.cpp	/^void OCR::drawVisualFeatures(Mat character, Mat hhist, Mat vhist, Mat lowData)$/;"	f	class:OCR	signature:(Mat character, Mat hhist, Mat vhist, Mat lowData)
+OCR::drawVisualFeatures	OCR.h	/^	void drawVisualFeatures(Mat character, Mat hhist, Mat vhist, Mat lowData);$/;"	p	class:OCR	access:private	signature:(Mat character, Mat hhist, Mat vhist, Mat lowData)
+OCR::features	OCR.cpp	/^Mat OCR::features(Mat in, int sizeData) \/\/»ñÈ¡ÌØÕ÷²ÎÊý$/;"	f	class:OCR	signature:(Mat in, int sizeData)
+OCR::features	OCR.h	/^	Mat features(Mat input, int size);$/;"	p	class:OCR	access:public	signature:(Mat input, int size)
+OCR::filename	OCR.h	/^	string filename;$/;"	m	class:OCR	access:public
+OCR::getVisualHistogram	OCR.cpp	/^Mat OCR :: getVisualHistogram(Mat *hist, int type)$/;"	f	class:OCR	signature:(Mat *hist, int type)
+OCR::getVisualHistogram	OCR.h	/^	Mat getVisualHistogram(Mat *hist, int type);$/;"	p	class:OCR	access:private	signature:(Mat *hist, int type)
+OCR::knnClassifier	OCR.h	/^	CvKNearest knnClassifier;$/;"	m	class:OCR	access:private
+OCR::numCharacters	OCR.cpp	/^const int OCR::numCharacters = 30;$/;"	m	class:OCR	file:
+OCR::numCharacters	OCR.h	/^	static const int numCharacters;$/;"	m	class:OCR	access:public
+OCR::preprocessChar	OCR.cpp	/^Mat OCR::preprocessChar(Mat in)  \/\/´¦Àí×Ö·û$/;"	f	class:OCR	signature:(Mat in)
+OCR::preprocessChar	OCR.h	/^	Mat preprocessChar (Mat in);$/;"	p	class:OCR	access:public	signature:(Mat in)
+OCR::run	OCR.cpp	/^string OCR:: run(Plate *input)$/;"	f	class:OCR	signature:(Plate *input)
+OCR::run	OCR.h	/^	string run(Plate *input);$/;"	p	class:OCR	access:public	signature:(Plate *input)
+OCR::saveSegments	OCR.h	/^	bool saveSegments;$/;"	m	class:OCR	access:public
+OCR::segement	OCR.cpp	/^vector <CharSegment> OCR ::segement(Plate plate)$/;"	f	class:OCR	signature:(Plate plate)
+OCR::segement	OCR.h	/^	vector <CharSegment> segement (Plate input);$/;"	p	class:OCR	access:private	signature:(Plate input)
+OCR::strCharacters	OCR.cpp	/^const char OCR::strCharacters[] = {'0', '1', '2', '3','4','5','6','7','8','9','B','C','D','F','G','H','J','K','L','M','N','P','R','S','T','V','W','X','Y','Z'};$/;"	m	class:OCR	file:
+OCR::strCharacters	OCR.h	/^	static const char strCharacters[];$/;"	m	class:OCR	access:public
+OCR::train	OCR.cpp	/^void OCR :: train(Mat TrainData, Mat classes, int nlayers)$/;"	f	class:OCR	signature:(Mat TrainData, Mat classes, int nlayers)
+OCR::train	OCR.h	/^	void train(Mat TrainData, Mat trianClasses, int nlayers);$/;"	p	class:OCR	access:public	signature:(Mat TrainData, Mat trianClasses, int nlayers)
+OCR::trainKnn	OCR.cpp	/^void OCR::trainKnn(Mat TrainSamples, Mat trianClasses, int k)$/;"	f	class:OCR	signature:(Mat TrainSamples, Mat trianClasses, int k)
+OCR::trainKnn	OCR.h	/^	void trainKnn(Mat TrainSamples, Mat trianClasses, int k);$/;"	p	class:OCR	access:public	signature:(Mat TrainSamples, Mat trianClasses, int k)
+OCR::trained	OCR.h	/^	bool trained;$/;"	m	class:OCR	access:private
+OCR::verifySizes	OCR.cpp	/^bool OCR::verifySizes(Mat r)  \/\/ÅÐ¶ÏÊÇ²»ÊÇ×Ö·ûÇøÓò$/;"	f	class:OCR	signature:(Mat r)
+OCR::verifySizes	OCR.h	/^	bool verifySizes(Mat r);$/;"	p	class:OCR	access:private	signature:(Mat r)
+OCR_h	OCR.h	2;"	d
+Plate	Plate.cpp	/^Plate::Plate()$/;"	f	class:Plate	signature:()
+Plate	Plate.cpp	/^Plate::Plate(Mat img, Rect pos)$/;"	f	class:Plate	signature:(Mat img, Rect pos)
+Plate	Plate.h	/^	Plate (Mat img, Rect pos);$/;"	p	class:Plate	access:public	signature:(Mat img, Rect pos)
+Plate	Plate.h	/^	Plate();$/;"	p	class:Plate	access:public	signature:()
+Plate	Plate.h	/^class Plate$/;"	c
+Plate::Plate	Plate.cpp	/^Plate::Plate()$/;"	f	class:Plate	signature:()
+Plate::Plate	Plate.cpp	/^Plate::Plate(Mat img, Rect pos)$/;"	f	class:Plate	signature:(Mat img, Rect pos)
+Plate::Plate	Plate.h	/^	Plate (Mat img, Rect pos);$/;"	p	class:Plate	access:public	signature:(Mat img, Rect pos)
+Plate::Plate	Plate.h	/^	Plate();$/;"	p	class:Plate	access:public	signature:()
+Plate::chars	Plate.h	/^	vector< char > chars;$/;"	m	class:Plate	access:public
+Plate::charsPos	Plate.h	/^	vector < Rect> charsPos;$/;"	m	class:Plate	access:public
+Plate::plateImg	Plate.h	/^	Mat plateImg;$/;"	m	class:Plate	access:public
+Plate::position	Plate.h	/^	Rect position;$/;"	m	class:Plate	access:public
+Plate::str	Plate.cpp	/^string Plate::str()$/;"	f	class:Plate	signature:()
+Plate::str	Plate.h	/^	string str();$/;"	p	class:Plate	access:public	signature:()
+Plate_h	Plate.h	2;"	d
+Preprocess	OCR.h	/^	Mat Preprocess(Mat in, int newSize);$/;"	p	class:OCR	access:private	signature:(Mat in, int newSize)
+ProjectedHistogram	OCR.cpp	/^Mat OCR::ProjectedHistogram(Mat img, int t)$/;"	f	class:OCR	signature:(Mat img, int t)
+ProjectedHistogram	OCR.h	/^	Mat ProjectedHistogram(Mat img, int i);$/;"	p	class:OCR	access:private	signature:(Mat img, int i)
+U	Debug/DetectRegions.obj	/^L—Ô|?U=Ê$/;"	v
+VERTICAL	OCR.h	18;"	d
+ann	OCR.h	/^	CvANN_MLP ann;$/;"	m	class:OCR	access:private
+charSize	OCR.h	/^	int charSize;$/;"	m	class:OCR	access:public
+chars	Plate.h	/^	vector< char > chars;$/;"	m	class:Plate	access:public
+charsPos	Plate.h	/^	vector < Rect> charsPos;$/;"	m	class:Plate	access:public
+classify	OCR.cpp	/^int OCR::classify(Mat f)$/;"	f	class:OCR	signature:(Mat f)
+classify	OCR.h	/^	int classify(Mat f);$/;"	p	class:OCR	access:public	signature:(Mat f)
+classifyKnn	OCR.cpp	/^int OCR::classifyKnn(Mat f)$/;"	f	class:OCR	signature:(Mat f)
+classifyKnn	OCR.h	/^	int classifyKnn(Mat f);$/;"	p	class:OCR	access:public	signature:(Mat f)
+drawVisualFeatures	OCR.cpp	/^void OCR::drawVisualFeatures(Mat character, Mat hhist, Mat vhist, Mat lowData)$/;"	f	class:OCR	signature:(Mat character, Mat hhist, Mat vhist, Mat lowData)
+drawVisualFeatures	OCR.h	/^	void drawVisualFeatures(Mat character, Mat hhist, Mat vhist, Mat lowData);$/;"	p	class:OCR	access:private	signature:(Mat character, Mat hhist, Mat vhist, Mat lowData)
+features	OCR.cpp	/^Mat OCR::features(Mat in, int sizeData) \/\/»ñÈ¡ÌØÕ÷²ÎÊý$/;"	f	class:OCR	signature:(Mat in, int sizeData)
+features	OCR.h	/^	Mat features(Mat input, int size);$/;"	p	class:OCR	access:public	signature:(Mat input, int size)
+filename	DetectRegions.h	/^	string filename;$/;"	m	class:DetectRegions	access:public
+filename	OCR.h	/^	string filename;$/;"	m	class:OCR	access:public
+format	tags	/^!_TAG_FILE_FORMAT	2	\/extended format; --format=1 will not append ;" to lines\/$/;"	v
+getFilename	main.cpp	/^string getFilename(string s)$/;"	f	signature:(string s)
+getVisualHistogram	OCR.cpp	/^Mat OCR :: getVisualHistogram(Mat *hist, int type)$/;"	f	class:OCR	signature:(Mat *hist, int type)
+getVisualHistogram	OCR.h	/^	Mat getVisualHistogram(Mat *hist, int type);$/;"	p	class:OCR	access:private	signature:(Mat *hist, int type)
+histeq	DetectRegions.cpp	/^Mat DetectRegions::histeq(Mat in)  \/\/Ö±·½Í¼¾ùºâ$/;"	f	class:DetectRegions	signature:(Mat in)
+histeq	DetectRegions.h	/^	Mat histeq ( Mat in);$/;"	p	class:DetectRegions	access:private	signature:( Mat in)
+img	OCR.h	/^	Mat img;$/;"	m	class:CharSegment	access:public
+knnClassifier	OCR.h	/^	CvKNearest knnClassifier;$/;"	m	class:OCR	access:private
+main	main.cpp	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
+numCharacters	OCR.cpp	/^const int OCR::numCharacters = 30;$/;"	m	class:OCR	file:
+numCharacters	OCR.h	/^	static const int numCharacters;$/;"	m	class:OCR	access:public
+plateImg	Plate.h	/^	Mat plateImg;$/;"	m	class:Plate	access:public
+pos	OCR.h	/^	Rect pos;$/;"	m	class:CharSegment	access:public
+position	Plate.h	/^	Rect position;$/;"	m	class:Plate	access:public
+preprocessChar	OCR.cpp	/^Mat OCR::preprocessChar(Mat in)  \/\/´¦Àí×Ö·û$/;"	f	class:OCR	signature:(Mat in)
+preprocessChar	OCR.h	/^	Mat preprocessChar (Mat in);$/;"	p	class:OCR	access:public	signature:(Mat in)
+run	DetectRegions.cpp	/^vector <Plate> DetectRegions :: run (Mat input)$/;"	f	class:DetectRegions	signature:(Mat input)
+run	DetectRegions.h	/^	vector < Plate > run (Mat input);$/;"	p	class:DetectRegions	access:public	signature:(Mat input)
+run	OCR.cpp	/^string OCR:: run(Plate *input)$/;"	f	class:OCR	signature:(Plate *input)
+run	OCR.h	/^	string run(Plate *input);$/;"	p	class:OCR	access:public	signature:(Plate *input)
+saveRegions	DetectRegions.h	/^	bool saveRegions;$/;"	m	class:DetectRegions	access:public
+saveSegments	OCR.h	/^	bool saveSegments;$/;"	m	class:OCR	access:public
+segement	OCR.cpp	/^vector <CharSegment> OCR ::segement(Plate plate)$/;"	f	class:OCR	signature:(Plate plate)
+segement	OCR.h	/^	vector <CharSegment> segement (Plate input);$/;"	p	class:OCR	access:private	signature:(Plate input)
+segment	DetectRegions.cpp	/^vector <Plate> DetectRegions::segment(Mat input)$/;"	f	class:DetectRegions	signature:(Mat input)
+segment	DetectRegions.h	/^	vector < Plate > segment (Mat input);$/;"	p	class:DetectRegions	access:private	signature:(Mat input)
+setFilename	DetectRegions.cpp	/^void DetectRegions::setFilename(string s)$/;"	f	class:DetectRegions	signature:(string s)
+setFilename	DetectRegions.h	/^	void setFilename( string f);$/;"	p	class:DetectRegions	access:public	signature:( string f)
+showSteps	DetectRegions.h	/^	bool showSteps;$/;"	m	class:DetectRegions	access:public
+str	Plate.cpp	/^string Plate::str()$/;"	f	class:Plate	signature:()
+str	Plate.h	/^	string str();$/;"	p	class:Plate	access:public	signature:()
+strCharacters	OCR.cpp	/^const char OCR::strCharacters[] = {'0', '1', '2', '3','4','5','6','7','8','9','B','C','D','F','G','H','J','K','L','M','N','P','R','S','T','V','W','X','Y','Z'};$/;"	m	class:OCR	file:
+strCharacters	OCR.h	/^	static const char strCharacters[];$/;"	m	class:OCR	access:public
+train	OCR.cpp	/^void OCR :: train(Mat TrainData, Mat classes, int nlayers)$/;"	f	class:OCR	signature:(Mat TrainData, Mat classes, int nlayers)
+train	OCR.h	/^	void train(Mat TrainData, Mat trianClasses, int nlayers);$/;"	p	class:OCR	access:public	signature:(Mat TrainData, Mat trianClasses, int nlayers)
+trainKnn	OCR.cpp	/^void OCR::trainKnn(Mat TrainSamples, Mat trianClasses, int k)$/;"	f	class:OCR	signature:(Mat TrainSamples, Mat trianClasses, int k)
+trainKnn	OCR.h	/^	void trainKnn(Mat TrainSamples, Mat trianClasses, int k);$/;"	p	class:OCR	access:public	signature:(Mat TrainSamples, Mat trianClasses, int k)
+trained	OCR.h	/^	bool trained;$/;"	m	class:OCR	access:private
+verifySizes	DetectRegions.cpp	/^bool DetectRegions::verifySizes (RotatedRect candidate)$/;"	f	class:DetectRegions	signature:(RotatedRect candidate)
+verifySizes	DetectRegions.h	/^	bool verifySizes(RotatedRect mr);$/;"	p	class:DetectRegions	access:private	signature:(RotatedRect mr)
+verifySizes	OCR.cpp	/^bool OCR::verifySizes(Mat r)  \/\/ÅÐ¶ÏÊÇ²»ÊÇ×Ö·ûÇøÓò$/;"	f	class:OCR	signature:(Mat r)
+verifySizes	OCR.h	/^	bool verifySizes(Mat r);$/;"	p	class:OCR	access:private	signature:(Mat r)
