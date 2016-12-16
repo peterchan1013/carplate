@@ -129,9 +129,9 @@ vector <Plate> DetectRegions::segment(Mat input)
 		Mat mask;
 		mask.create(input.rows + 2, input.cols + 2, CV_8UC1);
 		mask = Scalar::all(0);
-		int loDiff = 30;
-		int upDiff = 30;
-		int connectivity = 4;
+		int loDiff = 30;//seed与周围的像素点的负差最大值
+		int upDiff = 30;//seed与周围的像素点的正差最大值
+		int connectivity = 4;//连接参数
 		int newMaskVal = 255;
 		int NumSeeds = 10;
 		Rect ccomp;
@@ -143,6 +143,7 @@ vector <Plate> DetectRegions::segment(Mat input)
 			seed.y = rects[i].center.y + rand() % (int) minSize - (minSize / 2);
 			//画圆函数circle(picture,center,r,Scalar(0,0,0));承载图像，圆心，半径，线的颜色RGB
 			circle(result, seed, 1, Scalar(0,255,255), -1);
+			//floodFill函数水漫算法，填充出中重点处理的部分
 			int area = floodFill(input, mask, seed, Scalar(255, 0, 0), &ccomp,Scalar(loDiff,loDiff,loDiff), Scalar(upDiff,upDiff,upDiff), flags );
 
 		}
@@ -162,7 +163,8 @@ vector <Plate> DetectRegions::segment(Mat input)
 
 		if (verifySizes(minRect))
 		{
-			// rotated rectangle drawing 
+			// rotated rectangle drawing
+			// 画出初步识别的矩形 
 			Point2f rect_points[4];
 			minRect.points( rect_points);
 			for( int j = 0; j < 4; j++)
@@ -173,11 +175,13 @@ vector <Plate> DetectRegions::segment(Mat input)
 			float angle = minRect.angle;
 			if(r < 1)
 				angle = angle + 90;
+			//已知旋转中心坐标（坐标原点为图像左上端点）、旋转角度（单位为度°，顺时针为负，逆时针为正）、放缩比例，返回旋转/放缩矩阵
 			Mat rotmat = getRotationMatrix2D(minRect.center, angle, 1);
 
 
 			//Create and rotate image
 			Mat img_rotated;
+			//执行图像旋转，CV_INTER_CUBIC插值函数，三次插值
 			warpAffine(input, img_rotated, rotmat, input.size(), CV_INTER_CUBIC);
 
 
@@ -200,7 +204,7 @@ vector <Plate> DetectRegions::segment(Mat input)
 			if (saveRegions)
 			{
 				stringstream ss (stringstream::in | stringstream ::out);
-				ss << filename << "temp//"<< "_" << i << ".jpg";
+				ss << filename << "temp"<< "_" << i << ".jpg";
 				imwrite(ss.str(), result);
 			}
 			output.push_back(Plate (grayResult, minRect.boundingRect()));

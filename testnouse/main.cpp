@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	cout << "Opencv Automatic Number Plate Recognition\n";
 	
 	Mat input_image;
-	input_image = imread("/home/peterchan/final_project/picture/ori_car.jpg"); 
+	input_image = imread("/home/peterchan/final_project/picture/car.jpg"); 
 
 	//string filename_whitoutExt = getFilename(filename);
 	string filename_whitoutExt = "/home/peterchan/final_project/testnouse/testnouse/";
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 	DetectRegions detectRegions;
 	detectRegions.setFilename(filename_whitoutExt);
 	detectRegions.saveRegions = true;
-	detectRegions.showSteps = false;
+	detectRegions.showSteps = true;
 	vector < Plate > posible_regions = detectRegions.run(input_image);
 
 	/*分类车牌号与非车牌号*/
